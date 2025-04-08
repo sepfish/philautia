@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 23, in script
+    $ MC_name = povname.strip()
+  File "game/script.rpy", line 23, in <module>
+    $ MC_name = povname.strip()
+NameError: name 'povname' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 23, in script
+    $ MC_name = povname.strip()
+  File "C:\Users\trsky\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\trsky\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 23, in <module>
+    $ MC_name = povname.strip()
+NameError: name 'povname' is not defined
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.7.25031702
+Philautia 1.0
+Mon Apr  7 20:03:12 2025

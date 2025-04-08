@@ -1,33 +1,32 @@
-﻿# The script of the game goes in this file.
+﻿init:
+    # Screen configuration.
+    $ config.screen_width = 1920
+    $ config.screen_height = 1080
+    $ config.window_title = "Oath"
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
+    # Charcter definitions
+    define mc = Character("[MC_name]")
+    default MC_name = "Cecil"
+    define i = Character("Ivy")
+    define p = Character("Pat")
+    define y = Character("Yubin")
+    define k = Character("Karina")
 
 
 # The game starts here.
 
 label start:
+    "January 20XX"
+    "For the seniors of Willow Creek High, January marked the start of their last semester at the now familiar school. Some were already planning their futures, early admissions and decisions making the remaining months stress-free."
+    "…Others, less so. You are one of them, opening your locker to pull out your school supplies for the first day back since winter break. Neatly written on the cover is your name…"
+    $ MC_name = renpy.input("What is your name?")
+    $ MC_name = MC_name.strip()
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    if not MC_name:
+         $MC_name = "Cecil"
 
-    scene bg room
+    "You can’t believe the break went by so fast. The last semester had been hectic, applying to colleges taking up most of your time. Now, you can try to relax and enjoy the last high school semester of your life."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+    i "[MC_name!u]!!"
 
     return
