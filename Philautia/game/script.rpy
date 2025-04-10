@@ -15,6 +15,14 @@
     define mr = Character("Mr. Mahraun")
     define idk = Character("???")
 
+    # Character sprites
+    image karina_neutral = "karina_neutral.png"
+    image karina_sad = "karina_sad.png"
+
+    # Images
+    image bg_black = "bg_black.png"
+    image bg_temp_class = "temp_classroom.jpg"
+
     # White flash
     $ flash = Fade(.25, 0, .75, color="#ffffff")
 
@@ -26,7 +34,6 @@
 
 label start:
     # Week 1 Introduction Scene
-
     "January 20XX"
     "For the seniors of Willow Creek High, January marked the start of their last semester at the now familiar school. Some were already planning their futures, early admissions and decisions making the remaining months stress-free."
     "…Others, less so. You are one of them, opening your locker to pull out your school supplies for the first day back since winter break. Neatly written on the cover is your name…"
@@ -76,7 +83,7 @@ label start:
 
     "She leaves as quickly as she came. You remember that her first class is all the way across the building, and wish her luck silently. You’re sure she’ll make it before the first bell… probably."
 
-    with fade
+    scene bg_temp_class with fade
 
     "Class is normal as always. Senior year, the teachers always start acting more relaxed, even allowing for some students to skip class. It’ll be the time of tours and admissions soon, so you kind of get it."
 
@@ -128,7 +135,7 @@ label start:
 
     mc "See you!"
 
-    with fade
+    scene bg_black with fade
 
     "You’re lucky that your lunch period is during a normal lunch time. The cafeteria is packed, and you have to weave around students in order to find a seat to quickly eat."
 
@@ -136,13 +143,23 @@ label start:
 
     mc "Hey, Karina!"
 
+    show karina_neutral at center
+
     k "[MC_name], fancy seeing you here!"
+
+    hide karina_neutral
 
     "You smile, finding your place across the table. It’s a joke between you two, after you had slipped up upon seeing her in your advising group- the advising group that you shared with her."
 
+    show karina_neutral at center
+    
     k "Had a lively break?"
 
+    hide karina_neutral
+
     mc "You don’t even know…"
+
+    show karina_neutral at center
 
     k "You’re telling me. I need to figure out how to tell Mrs. Hughes that I won’t be around for an entire week."
 
@@ -154,9 +171,15 @@ label start:
         "(Give an empathetic sigh.)":
             k "Don’t give me that look. You know me, I’ll be able to figure out… somehow."
 
+    hide karina_neutral
+
     "She laughs it off."
 
+    show karina_neutral at center
+
     k "Let’s talk about something else, though. That’s a problem for the future!"
+
+    hide karina_neutral
 
     mc "Yeah, right."
 
@@ -166,13 +189,19 @@ label start:
 
     "If you had told your freshman self that you and Karina would have been friends in senior year, you probably would have laughed. Though not exactly {i}popular{/i}, the two of you had been in different circles all throughout middle school, and you had expected that to stay like that."
 
+    show karina_neutral at center
+    
     k "I’ve gotta run! Can’t be late to class on the first day of school."
+
+    hide karina_neutral
 
     mc "Go, go! Text you later!"
 
+    show karina_neutral at center
+
     k "Bye!"
 
-    with fade
+    hide karina_neutral
 
     idk "[MC_name]? Is that you?"
 
@@ -237,7 +266,7 @@ label weekend:
         "Do you..."
 
         "Hang Out with Ivy":
-            "tba"
+            "Currently WIP, check back later!"
 
         "Study with Pat":
             jump pat_w1
@@ -261,37 +290,63 @@ label karina_w1:
 
     "The moment you open the door, you’re greeted to Karina’s almost overenthusiastic greeting. She’s not usually this showy."
 
+    show karina_neutral at center
+
     k "[MC_name]! It's {i}so{/i} good to see you."
+    
+    hide karina_neutral
 
     mc "Karina! Is everything ok? Your message made it seem like it was urgent."
 
+    show karina_neutral at center
+
     k "Huh? Oh yeah! Everything’s fine. Thought that if we were going to be spending our weekend texting each other anyway, we might as well actually chat in person."
+
+    hide karina_neutral
 
     "You get the sense that it’s not the full truth, but you decide not to push. If Karina wanted to talk about it, you trusted that she would."
 
     mc "That’s true. You got me out of the house, at least."
 
+    show karina_neutral at center
+
     k "Mhm!"
 
     k "I’ve been to this cafe a few times before, and their lattes are pretty good!"
+
+    hide karina_neutral
 
     "You take a sip of your own drink. It's too bad you didn't get a latte."
 
     "The two of you make some small talk as she plays with the edge of her drink. Soon enough, her expression grows more serious."
 
+    show karina_sad at center
+
     k "Hey, [MC_name]... Have you ever been in a relationship?"
+
+    hide karina_sad
 
     "That’s a bit out of the blue… You think about responding, but you feel like it might be a hypothetical question. She sighs."
 
     mc "Karina… is this about your breakup?"
 
+    show karina_sad at center
+
     k "A little bit, yeah."
+
+    hide karina_sad
 
     mc "Oh... is everything alright?"
 
+    show karina_neutral at center
+
     k "Yeah, sorry to worry you. I just really needed to get out of the house."
 
+    hide karina_neutral
+
     "You nod. Though you don’t know all the details, Karina has mentioned her struggle with coming out to her parents in passing a few times."
+
+    show karina_sad at center
 
     menu:
         k "Have you talked to your parents about this sort of thing?"
@@ -300,7 +355,11 @@ label karina_w1:
             k "You know… Coming out, their thoughts on the community, and so on."
 
         "Yes, I was lucky it went well.":
+            hide karina_sad
+            show karina_neutral at center
             k "Oh? That's good. I’m happy for you."
+            hide karina_neutral
+            show karina_sad at center
 
         "Yes, but they didn’t take it well.":
             k "You and me both. I’m… sorry to hear that."
@@ -312,21 +371,35 @@ label karina_w1:
 
     k "It wouldn’t be so bad if they didn’t bring it up so… condescendingly. I’m thinking I might stop trying to explain it to them."
 
+    hide karina_sad
+
     mc "You should do what makes you feel most comfortable. Nobody is owed an explanation for your identity, no matter who it is."
+
+    show karina_sad at center
 
     k "You’re right. I know you're right, but..."
     
     k "It’s just such an important part of myself... I hoped the people I cared about could accept it."
 
+    hide karina_sad
+
     "You know that there isn't much you can do to help. You put your hand on their's, and they smile, though not completely genuinely."
+
+    show karina_neutral at center
 
     k "Thanks, [MC_name]."
 
     k "This is my problem, though. Sorry for dragging you out just to hear me rant."
 
+    hide karina_neutral
+
     mc "No worries. I’m glad to help."
 
+    show karina_neutral at center
+
     k "Next time, let me treat you to something. I can’t just keep letting you listen to my problems with nothing in exchange!"
+
+    hide karina_neutral
 
     "You laugh, and the seriousness is broken. The two of you spend some more time on more lighthearted conversation before Karina gets a message and gives you a quick goodbye."
 
