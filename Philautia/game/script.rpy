@@ -203,6 +203,8 @@ label start:
 
     hide karina_neutral
 
+    with fade
+
     idk "[MC_name]? Is that you?"
 
     "A voice calls out to you as you are packing to leave. Glancing over your shoulder, you look around for the source."
