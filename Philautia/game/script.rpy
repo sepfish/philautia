@@ -266,7 +266,7 @@ label weekend:
         "Do you..."
 
         "Hang Out with Ivy":
-            "Currently WIP, check back later!"
+            jump ivy_w1
 
         "Study with Pat":
             jump pat_w1
@@ -284,6 +284,83 @@ label stay_at_home:
     "You have too much to do this week to meet up with anyone. You remain at home, spending time with family and catching up on homework."
 
     "It’s a little bit lonely, but at the end of it all, you feel relieved. You can still spend time with people next weekend!"
+
+label ivy_w1:
+    "Over the weekend, Ivy texts you asking if you’re free. After you confirm, she proposes that the two of you go ice skating. On Saturday, you bundle up and join her at the local ice rink."
+
+    i "Two hours of skating in circles! I couldn’t ask for anything better."
+
+    "Neither of you have much ice-skating experience, so the two of you strap on your skates and wobble onto the ice. Ivy suddenly grabs onto you, almost causing you to fall over."
+
+    i "Oops, sorry! I thought I was going to fall over. How do you move again? I forgot!"
+
+    "After a couple of near-death experiences (according to Ivy), the two of you start on your cyclic ice-skating adventure."
+
+    i "Tell me all the deets about your trip! I know you already told me most of it, but tell me more."
+
+    "You describe your family’s winter break trip to Ivy again in great detail."
+
+    i "Ugh, that sounds like so much fun! My winter break was just writing a million essays and practicing my German."
+
+    "They try to sound nonchalant, but you can hear the hint of uncertainty in their voice. You know they’re really hoping to study abroad in Germany for university. But you also know that underneath Ivy’s bubbly exterior, they’re incredibly smart, so you’re confident they’ll succeed."
+
+    mc "Don’t worry too much about it. I’m sure all your hard work will pay off."
+
+    "Ivy laughs a little sheepishly."
+
+    i "Was it that obvious? Thanks, [MC_name]."
+
+    i "Oh, speaking of school - I heard that there’s a new student in our grade! Do you know if anyone knows them?"
+
+    mc "Oh, they’re my partner for Mr. Mahraun’s class project! Their name is Pat."
+
+    i "Awesome! You {i}need{/i} to introduce me sometime."
+
+    mc "Sure! Maybe next weekend."
+
+    "You’re surprised Ivy hasn’t actually met Pat yet, considering she’s friends with just about everyone in your grade. Honestly, you’re a bit jealous of these connections - with them, she got some good recommendation letters for college."
+
+    i "Moving here so late into the school year must be hard… I wonder what major they’re aiming for!"
+
+    idk "Um- hey there!"
+
+    "An unfamiliar girl approaches the two of you. Judging from Ivy’s reaction, they don’t recognize the girl either."
+
+    i "Oh, hey! Need something?"
+
+    idk "Hi. I- uh, I thought you look kinda cute! Would you want to exchange numbers and chat sometime?"
+
+    i "Aww, thanks! I’d love to, but I’m not looking for a romantic relationship- although I’d totally want to be friends!"
+
+    idk "Oh, are you not into girls…?"
+
+    i "Nope, sorry! Not into guys either- I’m just not into anyone."
+
+    "The girl looks between the two of you, confused."
+
+    idk "Is this, like, abstinence…?"
+
+    i "Actually, I’m aro-ace, so I’m just not interested in anyone romantically or sexually."
+
+    idk "Oh. Uh… okay…"
+
+    "The girl skates away back to a group of other people that seem to be her friends. They start talking quietly amongst themselves. Ivy looks at you and sighs."
+
+    i "Should we add another one to the “is it abstinence” counter?"
+
+    "You pull out your phone and open your messages with Ivy. You’ve been keeping track of the various unwarranted comments people give the two of you when you talk about your asexuality."
+
+    mc "…That makes four."
+
+    i "Man, that really sucks. She looked cute, too- I wanted to exchange fashion tips!"
+
+    mc "Hey, you could always talk fashion with me."
+
+    i "Of course not! You keep wearing that old vest! How many times have I told you to get another one!"
+
+    "The two of you laugh and resume skating while chatting aimlessly. You try to put the incident out of your mind, but it nags at you until you fall asleep that night."
+
+    return
 
 label karina_w1:
     "You and Karina exchange messages for some time, when she abruptly asks if you’re free at the moment. You are, and you say so, so you two arrange to meet at a nearby cafe."
