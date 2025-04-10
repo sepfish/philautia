@@ -37,7 +37,7 @@ label start:
     "January 20XX"
     "For the seniors of Willow Creek High, January marked the start of their last semester at the now familiar school. Some were already planning their futures, early admissions and decisions making the remaining months stress-free."
     "…Others, less so. You are one of them, opening your locker to pull out your school supplies for the first day back since winter break. Neatly written on the cover is your name…"
-    $ MC_name = renpy.input("What is your name?")
+    $ MC_name = renpy.input("What is your name?", default="Cecil")
     $ MC_name = MC_name.strip()
 
     if not MC_name:
