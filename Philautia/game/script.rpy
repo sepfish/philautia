@@ -256,6 +256,8 @@ label stay_at_home:
 
     "It’s a little bit lonely, but at the end of it all, you feel relieved. You can still spend time with people next weekend!"
 
+    return
+
 label karina_w1:
     "You and Karina exchange messages for some time, when she abruptly asks if you’re free at the moment. You are, and you say so, so you two arrange to meet at a nearby cafe."
 
