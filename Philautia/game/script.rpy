@@ -18,6 +18,7 @@
     # Character sprites
     image karina_neutral = "karina_neutral.png"
     image karina_sad = "karina_sad.png"
+    image ivy = "wide_ivy.png"
 
     # Images
     image bg_black = "bg_black.png"
@@ -57,7 +58,7 @@ label start:
 
     i "[MC_name!u]!!"
 
-    with flash
+    show ivy with flash
 
     "Your best friend, Ivy, comes barreling into you, picking you up into a spinning hug. It makes you a little dizzy, but she sets you down carefully as she always does. Your family had gone on a trip over break, so you haven’t seen her in a little while."
 
@@ -75,9 +76,15 @@ label start:
 
     i "Anyway, when’s your first free period?"
 
+    hide ivy
+
     "You show her your schedule."
 
+    show ivy
+
     i "Oh, damn… Not until the afternoon. That sucks. At least we have English together~ I’ll see you then!"
+
+    hide ivy
 
     mc "See you!"
 
@@ -292,19 +299,35 @@ label stay_at_home:
 label ivy_w1:
     "Over the weekend, Ivy texts you asking if you’re free. After you confirm, she proposes that the two of you go ice skating. On Saturday, you bundle up and join her at the local ice rink."
 
+    show ivy
+    
     i "Two hours of skating in circles! I couldn’t ask for anything better."
+
+    hide ivy
 
     "Neither of you have much ice-skating experience, so the two of you strap on your skates and wobble onto the ice. Ivy suddenly grabs onto you, almost causing you to fall over."
 
+    show ivy
+    
     i "Oops, sorry! I thought I was going to fall over. How do you move again? I forgot!"
+
+    hide ivy
 
     "After a couple of near-death experiences (according to Ivy), the two of you start on your cyclic ice-skating adventure."
 
+    show ivy
+
     i "Tell me all the deets about your trip! I know you already told me most of it, but tell me more."
+
+    hide ivy
 
     "You describe your family’s winter break trip to Ivy again in great detail."
 
+    show ivy
+
     i "Ugh, that sounds like so much fun! My winter break was just writing a million essays and practicing my German."
+
+    hide ivy
 
     "They try to sound nonchalant, but you can hear the hint of uncertainty in their voice. You know they’re really hoping to study abroad in Germany for university. But you also know that underneath Ivy’s bubbly exterior, they’re incredibly smart, so you’re confident they’ll succeed."
 
@@ -312,55 +335,95 @@ label ivy_w1:
 
     "Ivy laughs a little sheepishly."
 
+    show ivy
+
     i "Was it that obvious? Thanks, [MC_name]."
 
     i "Oh, speaking of school - I heard that there’s a new student in our grade! Do you know if anyone knows them?"
 
+    hide ivy
+
     mc "Oh, they’re my partner for Mr. Mahraun’s class project! Their name is Pat."
 
+    show ivy
+
     i "Awesome! You {i}need{/i} to introduce me sometime."
+
+    hide ivy
 
     mc "Sure! Maybe next weekend."
 
     "You’re surprised Ivy hasn’t actually met Pat yet, considering she’s friends with just about everyone in your grade. Honestly, you’re a bit jealous of these connections - with them, she got some good recommendation letters for college."
 
+    show ivy
+    
     i "Moving here so late into the school year must be hard… I wonder what major they’re aiming for!"
+
+    hide ivy
 
     idk "Um- hey there!"
 
     "An unfamiliar girl approaches the two of you. Judging from Ivy’s reaction, they don’t recognize the girl either."
 
+    show ivy
+
     i "Oh, hey! Need something?"
+
+    hide ivy
 
     idk "Hi. I- uh, I thought you look kinda cute! Would you want to exchange numbers and chat sometime?"
 
+    show ivy
+
     i "Aww, thanks! I’d love to, but I’m not looking for a romantic relationship- although I’d totally want to be friends!"
+
+    hide ivy
 
     idk "Oh, are you not into girls…?"
 
+    show ivy
+
     i "Nope, sorry! Not into guys either- I’m just not into anyone."
+
+    hide ivy
 
     "The girl looks between the two of you, confused."
 
     idk "Is this, like, abstinence…?"
 
+    show ivy
+
     i "Actually, I’m aro-ace, so I’m just not interested in anyone romantically or sexually."
+
+    hide ivy
 
     idk "Oh. Uh… okay…"
 
     "The girl skates away back to a group of other people that seem to be her friends. They start talking quietly amongst themselves. Ivy looks at you and sighs."
 
+    show ivy
+
     i "Should we add another one to the “is it abstinence” counter?"
+
+    hide ivy
 
     "You pull out your phone and open your messages with Ivy. You’ve been keeping track of the various unwarranted comments people give the two of you when you talk about your asexuality."
 
     mc "…That makes four."
 
+    show ivy
+
     i "Man, that really sucks. She looked cute, too- I wanted to exchange fashion tips!"
+
+    hide ivy
 
     mc "Hey, you could always talk fashion with me."
 
+    show ivy
+
     i "Of course not! You keep wearing that old vest! How many times have I told you to get another one!"
+
+    hide ivy
 
     "The two of you laugh and resume skating while chatting aimlessly. You try to put the incident out of your mind, but it nags at you until you fall asleep that night."
 
