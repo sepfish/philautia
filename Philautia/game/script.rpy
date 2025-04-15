@@ -28,6 +28,8 @@
     image bg_hall = "hallway.png"
     image bg_mc_bedroom = "mc_bedroom.png"
     image bg_yubin_bedroom = "yubin_bedroom.png"
+    image bg_library = "library.png"
+    image bg_icerink = "icerink.png"
 
     # White flash
     $ flash = Fade(.25, 0, .75, color="#ffffff")
@@ -311,6 +313,8 @@ label stay_at_home:
 label ivy_w1:
     "Over the weekend, Ivy texts you asking if you’re free. After you confirm, she proposes that the two of you go ice skating. On Saturday, you bundle up and join her at the local ice rink."
 
+    scene bg_icerink with fade
+
     show ivy
     
     i "Two hours of skating in circles! I couldn’t ask for anything better."
@@ -446,6 +450,8 @@ label karina_w1:
 
     "The moment you open the door, you’re greeted to Karina’s almost overenthusiastic greeting. She’s not usually this showy."
 
+    scene bg_cafe with fade
+
     show karina_neutral at center
 
     k "[MC_name]! It's {i}so{/i} good to see you."
@@ -574,6 +580,8 @@ label yubin_w1:
 
     "You go inside and take off your shoes, then follow Yubin (and Dubu) upstairs to his room."
 
+    scene yubin_bedroom with fade
+
     y "So, um..."
 
     "The air around the two of you becomes extremely awkward again. Dubu yips."
@@ -636,6 +644,8 @@ label yubin_w1:
 
 label pat_w1:
     "With a quick exchange of messages, you and Pat decide to meet up at the local library to work on your project together." 
+
+    scene bg_library with fade
 
     "You thought you were early, but once you arrive you see Pat sitting at one of the tables in the center, books and computer already out."
 
