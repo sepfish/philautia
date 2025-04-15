@@ -31,6 +31,7 @@
     image bg_yubin_bedroom = "yubin_bedroom.png"
     image bg_library = "library.png"
     image bg_icerink = "icerink.png"
+    image bg_neighbor = "neighborhood.png"
 
     # White flash
     $ flash = Fade(.25, 0, .75, color="#ffffff")
@@ -179,7 +180,7 @@ label start:
 
     mc "See you!"
 
-    scene bg_hall with fade
+    with fade
 
     "You’re lucky that your lunch period is during a normal lunch time. The cafeteria is packed, and you have to weave around students in order to find a seat to quickly eat."
 
@@ -247,7 +248,7 @@ label start:
 
     hide karina_neutral
 
-    with fade
+    scene bg_hall with fade
 
     idk "[MC_name]? Is that you?"
 
@@ -306,7 +307,7 @@ label start:
     jump weekend
 
 label weekend:
-    show bg_mc_bedroom with fade
+    scene bg_mc_bedroom with fade
 
     "And before you know it, it’s the weekend. There’s a lot that you can do, now that you have free time."
 
@@ -473,10 +474,10 @@ label ivy_w1:
 label karina_w1:
     "You and Karina exchange messages for some time, when she abruptly asks if you’re free at the moment. You are, and you say so, so you two arrange to meet at a nearby cafe."
 
-    "The moment you open the door, you’re greeted to Karina’s almost overenthusiastic greeting. She’s not usually this showy."
-
     scene bg_cafe with fade
 
+    "The moment you open the door, you’re greeted to Karina’s almost overenthusiastic greeting. She’s not usually this showy."
+    
     show karina_neutral at center
 
     k "[MC_name]! It's {i}so{/i} good to see you."
@@ -597,6 +598,8 @@ label karina_w1:
 label yubin_w1:
     "Over the weekend, you decide to head to Yubin’s to catch up with him. As soon as you ring the doorbell, the door swings open and you’re immediately attacked by a small, white, fluffy mass."
 
+    scene bg_neighbor with fade
+
     y "Dubu, get back here! Sorry about that! Hey, [MC_name]!"
 
     "Yubin picks up the wriggling mass and smiles at you apologetically."
@@ -633,7 +636,9 @@ label yubin_w1:
 
     "Yubin looks relieved. He starts to pet Dubu."
 
-    y "Thanks. Um... I was scared to tell my parents, since I thought they’d think I was wrong or going against God’s will… but they actually understood me and wanted to help me. You know, they told my little cousins to call me “Hyung” - like, big brother - instead of “Noona” - like, big sister - ... I feel so blessed to have parents like them."
+    y "Thanks. Um... I was scared to tell my parents, since I thought they’d think I was wrong or going against God’s will… but they actually understood me and wanted to help me."
+    
+    y "You know, they told my little cousins to call me “Hyung” - like, big brother - instead of “Noona” - like, big sister - ... I feel so blessed to have parents like them."
 
     y "Some of the people at my old church didn’t like me anymore, though... We ended up moving churches."
 
@@ -837,7 +842,7 @@ label pat_w1:
     jump end_demo
 
 label end_demo:
-    show bg_black with fade
+    scene bg_black with fade
 
     "Thank you for playing the Philautia Demo! This marks the end of week one. In a full game, there would be multiple weeks with a similar setup."
 
