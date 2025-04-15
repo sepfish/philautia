@@ -19,6 +19,7 @@
     image karina_neutral = "karina_neutral.png"
     image karina_sad = "karina_sad.png"
     image ivy = "wide_ivy.png"
+    image pat = "wide_pat.png"
 
     # Images
     image bg_black = "bg_black.png"
@@ -118,18 +119,32 @@ label start:
 
     "It’s not strange for you to not know everybody in your grade, but you’re pretty sure you’ve seen most of the people around town. It’s not a big one, anyway- even if you don’t know their name. But this person is a bona-fide stranger."
 
+    show pat
+
     idk "Um..."
+
+    hide pat
 
     mc "Um, hello! My name is [MC_name], [MC_pronouns]. It’s nice to meet you!"
 
+    show pat
+
     p "Pat… Pat Cordova, they/them."
+
+    hide pat
 
     mc "..."
 
+    show pat
+
     p "..."
+
+    hide pat
 
     "You come to the conclusion that you definitely haven’t seen them before, either in town or school. Maybe seeing the confusion on your face, they sigh and offer an explanation."
 
+    show pat
+    
     p "I just moved here a few days ago."
 
     menu:
@@ -139,18 +154,28 @@ label start:
             p "Thanks..."
         "Let me know if you need any help.":
             p "Thanks, I will."
+
+    hide pat
     
     "Conversation dies down as all other pairs finish introducing themselves to each other- or so they’d claim. You’re pretty sure that they’re just catching up from break."
 
     "You exchange contact information with Pat."
 
+    show pat
+
     p "We should message about the project later…"
+
+    hide pat
 
     mc "Yeah, sure! The proposal’s due in a week, so we can message after school."
 
     "The bell rings."
 
+    show pat
+
     p "We really spent a lot of time in that activity… I’ll see you, then."
+
+    hide pat
 
     mc "See you!"
 
@@ -655,23 +680,39 @@ label pat_w1:
 
     "They jump."
 
+    show pat
+
     p "[MC_name]! You scared me!"
+
+    hide pat
 
     mc "Haha, sorry. What are you focused on?"
 
+    show pat
+
     p "My other assignments... I don’t really have anything else to do."
+
+    hide pat
 
     "While you {i}are{/i} unpacking your stuff, you decide to stop to look at them, for emphasis."
 
     mc "...Nothing? No extracurriculars or anything?"
 
+    show pat
+
     p "...No, not really. "
 
     p "I mean, I just moved in... so there’s no clubs that I’m already a part of. And it’s just my last semester in high school anyway, so there’s no point in joining any clubs. Applications have already been submitted and everything."
 
+    hide pat
+    
     mc "I guess that makes sense… Still, isn’t that a little lonely?"
 
+    show pat
+
     p "A little bit, yeah. But that’s kind of par for the course moving anywhere, you know?"
+
+    hide pat
 
     "They don’t seem super interested in talking more about it, and you guess that you should focus on the assignment for the time being."
 
@@ -679,18 +720,30 @@ label pat_w1:
 
     "As you lean back in your chair you notice that Pat has a thoughtful look in their eyes."
 
+    show pat
+
     p "Hey, [MC_name]... does Willow Creek have a club for members of the LGBTQA+ community? Like, y’know, a GSA?"
+
+    hide pat
 
     mc "GSA?"
 
+    show pat
+
     p "That’s what my old school called it, at least. I think they were thinking of coming up with a new name... but I left before I could hear the results of that."
+
+    hide pat
 
     "You think about the school's clubs. While it was true that many members of that community were friends and met together, you don’t think that there was an official club for it."
 
     mc "I don’t think so. I can ask around, though!"
 
+    show pat
+
     p "No... it’s ok. I was just thinking about what you said about extracurriculars and clubs. I don’t know, my old school had one and I never joined, so I guess it wouldn’t matter either way..."
 
+    hide pat
+    
     mc "It’s not too late to start one here! I think the process for starting a club is pretty simple. Let me search it up..."
 
     "Pat watches as you click through the links with interest."
@@ -703,41 +756,69 @@ label pat_w1:
 
     mc "If you want to, that is."
 
+    show pat
+
     p "I don’t know... I feel like it would be weird if I decided to lead a GSA here."
+
+    hide pat
 
     mc "Weird? How so?"
 
-    pat "The whole reason I didn’t join GSA at my old school was that I felt like I didn’t really belong. So here, where I don’t know anyone..."
+    show pat
+
+    p "The whole reason I didn’t join GSA at my old school was that I felt like I didn’t really belong. So here, where I don’t know anyone..."
+
+    hide pat
 
     "You frown. You don’t know all the details, but still, that wasn't a particuarly promising choice of words."
 
     mc "Is there any reason that you think that? Everyone should be welcomed at this club, whether they identify on the spectrum or just to support it."
 
+    show pat
+
     p "I know that, but..."
 
-    "He stops, then clarifies."
+    hide pat
+
+    "They stop, then clarifiy."
+
+    show pat
 
     p "I identify as asexual. "
 
+    hide pat
+
     "You nod- so do you, but you recognize that you have been lucky in your experience on the spectrum in your relatively small circle of friends. "
+
+    show pat
 
     p "I didn’t really hide it, but I wasn’t really out in my old school. Everyone else in the club was... out, that is, so I didn’t fit in."
     
     p "All of them had boyfriends or girlfriends or were talking about things like hormones and surgeries... and I didn’t really have anything to say."
 
+    hide pat
+
     mc "Oh."
 
     "You had similar concerns when you first came out, but thankfully, none of those situations really happened."
+
+    show pat
 
     p "They were all super welcoming but... none of their activities really applied to me every time I showed up so I just..."
     
     p "Stopped going."
 
+    hide pat
+
     mc "I’m sorry to hear that. We definitely don’t need to make a club if you’re not comfortable. "
+
+    show pat
 
     p "It’s not just the club. I’m worried that it’ll keep happening in college too. I want to join these communities but I end up having nothing to say, or worse, I feel like I don’t belong, and..."
 
     p "Sorry, that’s a lot."
+
+    hide pat
 
     mc "No, don’t be! These are big concerns, and I'm sure moving doesn't help with all the stress."
     
@@ -745,7 +826,11 @@ label pat_w1:
 
     mc "That way, you won’t have to feel this way after we graduate."
 
+    show pat
+
     p "...Thanks, [MC]."
+
+    hide pat
 
     "They smile, and you feel like while you might not have resolved the issue, you’ve taken the first step in making another friend. The rest of your study session goes by peacefully, and the two of you part to go home after a productive day."
 
