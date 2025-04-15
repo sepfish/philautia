@@ -828,7 +828,7 @@ label pat_w1:
 
     show pat
 
-    p "...Thanks, [MC]."
+    p "...Thanks, [MC_name]."
 
     hide pat
 
