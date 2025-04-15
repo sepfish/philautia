@@ -23,6 +23,11 @@
     # Images
     image bg_black = "bg_black.png"
     image bg_temp_class = "temp_classroom.jpg"
+    image bg_cafe = "cafe.png"
+    image bg_class = "classroom.png"
+    image bg_hall = "hallway.png"
+    image bg_mc_bedroom = "mc_bedroom.png"
+    image bg_yubin_bedroom = "yubin_bedroom.png"
 
     # White flash
     $ flash = Fade(.25, 0, .75, color="#ffffff")
@@ -35,9 +40,12 @@
 
 label start:
     # Week 1 Introduction Scene
+    scene bg_black
+
     "January 20XX"
     "For the seniors of Willow Creek High, January marked the start of their last semester at the now familiar school. Some were already planning their futures, early admissions and decisions making the remaining months stress-free."
     "…Others, less so. You are one of them, opening your locker to pull out your school supplies for the first day back since winter break. Neatly written on the cover is your name…"
+
     $ MC_name = renpy.input("What is your name?", default="Cecil")
     $ MC_name = MC_name.strip()
 
@@ -53,6 +61,8 @@ label start:
             $ MC_pronouns = "she/her"
         "They/Them":
             $ MC_pronouns = "they/them"
+
+    scene bg_hall with fade
 
     "You can’t believe the break went by so fast. The last semester had been hectic, applying to colleges taking up most of your time. Now, you can try to relax and enjoy the last high school semester of your life."
 
@@ -90,7 +100,7 @@ label start:
 
     "She leaves as quickly as she came. You remember that her first class is all the way across the building, and wish her luck silently. You’re sure she’ll make it before the first bell… probably."
 
-    scene bg_temp_class with fade
+    scene bg_class with fade
 
     "Class is normal as always. Senior year, the teachers always start acting more relaxed, even allowing for some students to skip class. It’ll be the time of tours and admissions soon, so you kind of get it."
 
@@ -142,7 +152,7 @@ label start:
 
     mc "See you!"
 
-    scene bg_black with fade
+    scene bg_hall with fade
 
     "You’re lucky that your lunch period is during a normal lunch time. The cafeteria is packed, and you have to weave around students in order to find a seat to quickly eat."
 
@@ -269,6 +279,8 @@ label start:
     jump weekend
 
 label weekend:
+    show bg_mc_bedroom with fade
+
     "And before you know it, it’s the weekend. There’s a lot that you can do, now that you have free time."
 
     menu:
@@ -294,7 +306,7 @@ label stay_at_home:
 
     "It’s a little bit lonely, but at the end of it all, you feel relieved. You can still spend time with people next weekend!"
 
-    return
+    jump end_demo
 
 label ivy_w1:
     "Over the weekend, Ivy texts you asking if you’re free. After you confirm, she proposes that the two of you go ice skating. On Saturday, you bundle up and join her at the local ice rink."
@@ -427,7 +439,7 @@ label ivy_w1:
 
     "The two of you laugh and resume skating while chatting aimlessly. You try to put the incident out of your mind, but it nags at you until you fall asleep that night."
 
-    return
+    jump end_demo
 
 label karina_w1:
     "You and Karina exchange messages for some time, when she abruptly asks if you’re free at the moment. You are, and you say so, so you two arrange to meet at a nearby cafe."
@@ -549,7 +561,7 @@ label karina_w1:
 
     "You finish your drink and head home."
 
-    return
+    jump end_demo
 
 label yubin_w1:
     "Over the weekend, you decide to head to Yubin’s to catch up with him. As soon as you ring the doorbell, the door swings open and you’re immediately attacked by a small, white, fluffy mass."
@@ -620,7 +632,7 @@ label yubin_w1:
 
     "You hear the pattering of small feet behind Yubin, and he quickly waves and shuts the door. You hear him scold Dubu and tell her to stay put, and you laugh as you make your way back home."
 
-    return
+    jump end_demo
 
 label pat_w1:
     "With a quick exchange of messages, you and Pat decide to meet up at the local library to work on your project together." 
@@ -726,5 +738,14 @@ label pat_w1:
     p "...Thanks, [MC]."
 
     "They smile, and you feel like while you might not have resolved the issue, you’ve taken the first step in making another friend. The rest of your study session goes by peacefully, and the two of you part to go home after a productive day."
+
+    jump end_demo
+
+label end_demo:
+    show bg_black with fade
+
+    "Thank you for playing the Philautia Demo! This marks the end of week one. In a full game, there would be multiple weeks with a similar setup."
+
+    "We hope you enjoyed!"
 
     return
