@@ -20,6 +20,7 @@
     image karina_sad = "karina_sad.png"
     image ivy = "wide_ivy.png"
     image pat = "wide_pat.png"
+    image cecil = "wide_cecil.png"
 
     # Images
     image bg_black = "bg_black.png"
@@ -48,6 +49,9 @@ label start:
 
     "January 20XX"
     "For the seniors of Willow Creek High, January marked the start of their last semester at the now familiar school. Some were already planning their futures, early admissions and decisions making the remaining months stress-free."
+    
+    show cecil with fade
+    
     "…Others, less so. You are one of them, opening your locker to pull out your school supplies for the first day back since winter break. Neatly written on the cover is your name…"
 
     $ MC_name = renpy.input("What is your name?", default="Cecil")
@@ -66,6 +70,7 @@ label start:
         "They/Them":
             $ MC_pronouns = "they/them"
 
+    hide cecil
     scene bg_hall with fade
 
     "You can’t believe the break went by so fast. The last semester had been hectic, applying to colleges taking up most of your time. Now, you can try to relax and enjoy the last high school semester of your life."
@@ -90,17 +95,16 @@ label start:
 
     i "Anyway, when’s your first free period?"
 
-    hide ivy
-
     "You show her your schedule."
-
-    show ivy
 
     i "Oh, damn… Not until the afternoon. That sucks. At least we have English together~ I’ll see you then!"
 
     hide ivy
+    show cecil
 
     mc "See you!"
+
+    hide cecil
 
     "She leaves as quickly as she came. You remember that her first class is all the way across the building, and wish her luck silently. You’re sure she’ll make it before the first bell… probably."
 
@@ -125,17 +129,21 @@ label start:
     idk "Um..."
 
     hide pat
+    show cecil
 
     mc "Um, hello! My name is [MC_name], [MC_pronouns]. It’s nice to meet you!"
 
+    hide cecil
     show pat
 
     p "Pat… Pat Cordova, they/them."
 
     hide pat
+    show cecil
 
     mc "..."
 
+    hide cecil
     show pat
 
     p "..."
@@ -167,8 +175,11 @@ label start:
     p "We should message about the project later…"
 
     hide pat
+    show cecil
 
     mc "Yeah, sure! The proposal’s due in a week, so we can message after school."
+
+    hide cecil
 
     "The bell rings."
 
@@ -177,17 +188,23 @@ label start:
     p "We really spent a lot of time in that activity… I’ll see you, then."
 
     hide pat
+    show cecil
 
     mc "See you!"
 
+
+    hide cecil
     with fade
 
     "You’re lucky that your lunch period is during a normal lunch time. The cafeteria is packed, and you have to weave around students in order to find a seat to quickly eat."
 
     "It’s too bad that Ivy doesn’t have the same lunch as you, but it’s not like you don’t know anyone else. You approach one of those such friends."
 
+    show cecil
+
     mc "Hey, Karina!"
 
+    hide cecil
     show karina_neutral at center
 
     k "[MC_name], fancy seeing you here!"
@@ -201,9 +218,11 @@ label start:
     k "Had a lively break?"
 
     hide karina_neutral
+    show cecil
 
     mc "You don’t even know…"
 
+    hide cecil
     show karina_neutral at center
 
     k "You’re telling me. I need to figure out how to tell Mrs. Hughes that I won’t be around for an entire week."
@@ -225,8 +244,11 @@ label start:
     k "Let’s talk about something else, though. That’s a problem for the future!"
 
     hide karina_neutral
+    show cecil
 
     mc "Yeah, right."
+
+    hide cecil
 
     "She’s probably already drafted up an email in her head, knowing her. You wonder if the word procrastination is even in her dictionary."
 
@@ -239,9 +261,11 @@ label start:
     k "I’ve gotta run! Can’t be late to class on the first day of school."
 
     hide karina_neutral
+    show cecil
 
     mc "Go, go! Text you later!"
 
+    hide cecil
     show karina_neutral at center
 
     k "Bye!"
@@ -256,7 +280,11 @@ label start:
 
     idk "[MC_name]!"
 
+    show cecil
+
     mc "...?"
+
+    hide cecil
 
     "An unfamiliar student walks over to you."
 
@@ -266,13 +294,21 @@ label start:
 
     y "It’s me, Yubin! Yubin Kim? Does that name ring a bell?"
 
+    show cecil
+
     mc "The neighbor’s kid?"
+
+    hide cecil
 
     y "Yes! It’s been a long time!"
 
     "That’s an understatement. It’s been, what, how many years?"
 
+    show cecil
+
     mc "Woah, did you just move back? When did you get here?"
+
+    hide cecil
 
     y "I just moved back over winter break."
 
@@ -285,8 +321,12 @@ label start:
             y "We should! Are you free this weekend?"
         "Why did you move back?":
             y "Well, the same reason I moved away. Dad’s job and all."
+    
+    show cecil
 
     mc "It’s great to see you again! Do you need any help settling in, or…"
+
+    hide cecil
     
     y "Nah, all the teachers have been super helpful. I’ll let you know if I need anything, though."
     
@@ -296,11 +336,19 @@ label start:
 
     "In a way, you have."
 
+    show cecil
+
     mc "Are you back in the same house again?"
 
+    hide cecil
+
     y "That would have been a huge coincidence! But no, we’re a couple streets over. You can still come visit if you want, though! Just like old times!"
+    
+    show cecil
 
     mc "I’ll look forward to it!"
+
+    hide cecil
 
     "The interaction still ends with some awkwardness, but you wave bye to Yubin as you head down opposite ends of the hallway."
 
@@ -373,7 +421,11 @@ label ivy_w1:
 
     "They try to sound nonchalant, but you can hear the hint of uncertainty in their voice. You know they’re really hoping to study abroad in Germany for university. But you also know that underneath Ivy’s bubbly exterior, they’re incredibly smart, so you’re confident they’ll succeed."
 
+    show cecil
+    
     mc "Don’t worry too much about it. I’m sure all your hard work will pay off."
+
+    hide cecil
 
     "Ivy laughs a little sheepishly."
 
@@ -384,16 +436,21 @@ label ivy_w1:
     i "Oh, speaking of school - I heard that there’s a new student in our grade! Do you know if anyone knows them?"
 
     hide ivy
+    show cecil
 
     mc "Oh, they’re my partner for Mr. Mahraun’s class project! Their name is Pat."
 
+    hide cecil
     show ivy
 
     i "Awesome! You {i}need{/i} to introduce me sometime."
 
     hide ivy
+    show cecil
 
     mc "Sure! Maybe next weekend."
+
+    hide cecil
 
     "You’re surprised Ivy hasn’t actually met Pat yet, considering she’s friends with just about everyone in your grade. Honestly, you’re a bit jealous of these connections - with them, she got some good recommendation letters for college."
 
@@ -451,16 +508,21 @@ label ivy_w1:
 
     "You pull out your phone and open your messages with Ivy. You’ve been keeping track of the various unwarranted comments people give the two of you when you talk about your asexuality."
 
+    show cecil
+
     mc "…That makes four."
 
+    hide cecil
     show ivy
 
     i "Man, that really sucks. She looked cute, too- I wanted to exchange fashion tips!"
 
     hide ivy
+    show cecil
 
     mc "Hey, you could always talk fashion with me."
 
+    hide cecil
     show ivy
 
     i "Of course not! You keep wearing that old vest! How many times have I told you to get another one!"
@@ -483,9 +545,11 @@ label karina_w1:
     k "[MC_name]! It's {i}so{/i} good to see you."
     
     hide karina_neutral
+    show cecil
 
     mc "Karina! Is everything ok? Your message made it seem like it was urgent."
 
+    hide cecil
     show karina_neutral at center
 
     k "Huh? Oh yeah! Everything’s fine. Thought that if we were going to be spending our weekend texting each other anyway, we might as well actually chat in person."
@@ -494,8 +558,11 @@ label karina_w1:
 
     "You get the sense that it’s not the full truth, but you decide not to push. If Karina wanted to talk about it, you trusted that she would."
 
+    show cecil
+
     mc "That’s true. You got me out of the house, at least."
 
+    hide cecil
     show karina_neutral at center
 
     k "Mhm!"
@@ -516,16 +583,21 @@ label karina_w1:
 
     "That’s a bit out of the blue… You think about responding, but you feel like it might be a hypothetical question. She sighs."
 
+    show cecil
+
     mc "Karina… is this about your breakup?"
 
+    hide cecil
     show karina_sad at center
 
     k "A little bit, yeah."
 
     hide karina_sad
+    show cecil
 
     mc "Oh... is everything alright?"
 
+    hide cecil
     show karina_neutral at center
 
     k "Yeah, sorry to worry you. I just really needed to get out of the house."
@@ -560,9 +632,11 @@ label karina_w1:
     k "It wouldn’t be so bad if they didn’t bring it up so… condescendingly. I’m thinking I might stop trying to explain it to them."
 
     hide karina_sad
+    show cecil
 
     mc "You should do what makes you feel most comfortable. Nobody is owed an explanation for your identity, no matter who it is."
 
+    hide cecil
     show karina_sad at center
 
     k "You’re right. I know you're right, but..."
@@ -580,9 +654,11 @@ label karina_w1:
     k "This is my problem, though. Sorry for dragging you out just to hear me rant."
 
     hide karina_neutral
+    show cecil
 
     mc "No worries. I’m glad to help."
 
+    hide cecil
     show karina_neutral at center
 
     k "Next time, let me treat you to something. I can’t just keep letting you listen to my problems with nothing in exchange!"
@@ -597,8 +673,6 @@ label karina_w1:
 
 label yubin_w1:
     "Over the weekend, you decide to head to Yubin’s to catch up with him. As soon as you ring the doorbell, the door swings open and you’re immediately attacked by a small, white, fluffy mass."
-
-    scene bg_neighbor with fade
 
     y "Dubu, get back here! Sorry about that! Hey, [MC_name]!"
 
@@ -620,7 +694,11 @@ label yubin_w1:
     
     "As he shows you memories of the past, an understanding starts to dawn in your mind."
 
+    show cecil
+
     mc "Yubin, um..."
+
+    hide cecil
 
     y "Yeah, I knew you would ask. I… I should explain, huh?"
 
@@ -632,7 +710,11 @@ label yubin_w1:
 
     "You can see Yubin start to fidget with the hem of his shirt. He looks at you cautiously, as though he’s expecting something from you."
 
+    show cecil
+
     mc "I’m happy for you, Yubin! I’m glad that you figured it out and you feel more comfortable now. How did telling your parents go?"
+
+    hide cecil
 
     "Yubin looks relieved. He starts to pet Dubu."
 
@@ -650,12 +732,20 @@ label yubin_w1:
 
     "Hmm, could it be...?"
 
+    show cecil
+
     mc "Do you think you’re aromantic? That means you don’t feel romantic attraction to anybody. You could be asexual as well, which means you don’t feel sexual attraction either."
 
+    hide cecil
+    
     y "There’s a word for that? Wait, I didn’t know that. How did you know?"
 
-    mc "I have some friends that are aromantic and asexual! It’s also kind of a spectrum - sometimes you can feel romantic or sexual attraction, but not all the time."
+    show cecil
 
+    mc "I, along with some of my friends, identify as some form of aromatic or asexual! It’s also kind of a spectrum - sometimes you can feel romantic or sexual attraction, but not all the time."
+
+    hide cecil
+    
     "You spend a couple of minutes explaining the aromantic-asexual umbrella, which you’ve researched extensively after you - and some of your friends - began identifying as ace. Yubin nods and takes in your every word."
 
     y "That makes sense. Then, yes... I think I’m aro-ace. I always thought it was weird that other people wanted boyfriends or girlfriends, but I never did. Thanks, [MC_name]... um, how do I explain this to my parents?"
@@ -681,7 +771,11 @@ label pat_w1:
 
     "They don’t seem to notice you until you slide into the seat across from them."
 
+    show cecil
+
     mc "Hey, Pat!"
+
+    hide cecil
 
     "They jump."
 
@@ -690,9 +784,11 @@ label pat_w1:
     p "[MC_name]! You scared me!"
 
     hide pat
+    show cecil
 
     mc "Haha, sorry. What are you focused on?"
 
+    hide cecil
     show pat
 
     p "My other assignments... I don’t really have anything else to do."
@@ -701,8 +797,11 @@ label pat_w1:
 
     "While you {i}are{/i} unpacking your stuff, you decide to stop to look at them, for emphasis."
 
+    show cecil
+
     mc "...Nothing? No extracurriculars or anything?"
 
+    hide cecil
     show pat
 
     p "...No, not really. "
@@ -710,9 +809,11 @@ label pat_w1:
     p "I mean, I just moved in... so there’s no clubs that I’m already a part of. And it’s just my last semester in high school anyway, so there’s no point in joining any clubs. Applications have already been submitted and everything."
 
     hide pat
+    show cecil
     
     mc "I guess that makes sense… Still, isn’t that a little lonely?"
 
+    hide cecil
     show pat
 
     p "A little bit, yeah. But that’s kind of par for the course moving anywhere, you know?"
@@ -730,9 +831,11 @@ label pat_w1:
     p "Hey, [MC_name]... does Willow Creek have a club for members of the LGBTQA+ community? Like, y’know, a GSA?"
 
     hide pat
+    show cecil
 
     mc "GSA?"
 
+    hide cecil
     show pat
 
     p "That’s what my old school called it, at least. I think they were thinking of coming up with a new name... but I left before I could hear the results of that."
@@ -741,34 +844,49 @@ label pat_w1:
 
     "You think about the school's clubs. While it was true that many members of that community were friends and met together, you don’t think that there was an official club for it."
 
+    show cecil
+    
     mc "I don’t think so. I can ask around, though!"
 
+    hide cecil
     show pat
 
     p "No... it’s ok. I was just thinking about what you said about extracurriculars and clubs. I don’t know, my old school had one and I never joined, so I guess it wouldn’t matter either way..."
 
     hide pat
+    show cecil
     
     mc "It’s not too late to start one here! I think the process for starting a club is pretty simple. Let me search it up..."
+
+    hide cecil
 
     "Pat watches as you click through the links with interest."
 
     "You find the form after a little bit of snooping around."
 
+    show cecil
+
     mc "Here! We can probably find a teaching advisor next week if we ask around."
+
+    hide cecil
 
     "There’s an awkward silence as you realize you might have gotten ahead of yourself."
 
+    show cecil
+
     mc "If you want to, that is."
 
+    hide cecil
     show pat
 
     p "I don’t know... I feel like it would be weird if I decided to lead a GSA here."
 
     hide pat
+    show cecil
 
     mc "Weird? How so?"
 
+    hide cecil
     show pat
 
     p "The whole reason I didn’t join GSA at my old school was that I felt like I didn’t really belong. So here, where I don’t know anyone..."
@@ -777,8 +895,11 @@ label pat_w1:
 
     "You frown. You don’t know all the details, but still, that wasn't a particuarly promising choice of words."
 
+    show cecil
+
     mc "Is there any reason that you think that? Everyone should be welcomed at this club, whether they identify on the spectrum or just to support it."
 
+    hide cecil
     show pat
 
     p "I know that, but..."
@@ -802,8 +923,11 @@ label pat_w1:
     p "All of them had boyfriends or girlfriends or were talking about things like hormones and surgeries... and I didn’t really have anything to say."
 
     hide pat
+    show cecil
 
     mc "Oh."
+
+    hide cecil
 
     "You had similar concerns when you first came out, but thankfully, none of those situations really happened."
 
@@ -814,9 +938,11 @@ label pat_w1:
     p "Stopped going."
 
     hide pat
+    show cecil
 
     mc "I’m sorry to hear that. We definitely don’t need to make a club if you’re not comfortable. "
 
+    hide cecil
     show pat
 
     p "It’s not just the club. I’m worried that it’ll keep happening in college too. I want to join these communities but I end up having nothing to say, or worse, I feel like I don’t belong, and..."
@@ -824,6 +950,7 @@ label pat_w1:
     p "Sorry, that’s a lot."
 
     hide pat
+    show cecil
 
     mc "No, don’t be! These are big concerns, and I'm sure moving doesn't help with all the stress."
     
@@ -831,6 +958,7 @@ label pat_w1:
 
     mc "That way, you won’t have to feel this way after we graduate."
 
+    hide cecil
     show pat
 
     p "...Thanks, [MC_name]."
