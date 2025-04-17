@@ -21,6 +21,7 @@
     image ivy = "wide_ivy.png"
     image pat = "wide_pat.png"
     image cecil = "wide_cecil.png"
+    image yubin = "wide_yubin.png"
 
     # Images
     image bg_black = "bg_black.png"
@@ -288,27 +289,33 @@ label start:
 
     "An unfamiliar student walks over to you."
 
+    show yubin
+
     idk " It’s me. We used to play together all the time as kids!"
 
     "A vague memory comes to you, but it doesn’t match with the person you see before you. You used to play with a neighbor’s kid all the way back in elementary school, but…"
 
     y "It’s me, Yubin! Yubin Kim? Does that name ring a bell?"
 
+    hide yubin
     show cecil
 
     mc "The neighbor’s kid?"
 
     hide cecil
+    show yubin
 
     y "Yes! It’s been a long time!"
 
     "That’s an understatement. It’s been, what, how many years?"
 
+    hide yubin
     show cecil
 
     mc "Woah, did you just move back? When did you get here?"
 
     hide cecil
+    show yubin
 
     y "I just moved back over winter break."
 
@@ -322,15 +329,19 @@ label start:
         "Why did you move back?":
             y "Well, the same reason I moved away. Dad’s job and all."
     
+    hide yubin
     show cecil
 
     mc "It’s great to see you again! Do you need any help settling in, or…"
 
     hide cecil
+    show yubin
     
     y "Nah, all the teachers have been super helpful. I’ll let you know if I need anything, though."
     
     y "That reminds me: what’s your number? The last time we saw each other, neither of us had phones, haha!"
+
+    hide yubin
 
     "The two of you exchange contact information. It feels a little strange, like you’ve jumped from childhood to near-adulthood in just minutes."
 
@@ -341,9 +352,11 @@ label start:
     mc "Are you back in the same house again?"
 
     hide cecil
+    show yubin
 
     y "That would have been a huge coincidence! But no, we’re a couple streets over. You can still come visit if you want, though! Just like old times!"
     
+    hide yubin
     show cecil
 
     mc "I’ll look forward to it!"
@@ -674,21 +687,33 @@ label karina_w1:
 label yubin_w1:
     "Over the weekend, you decide to head to Yubin’s to catch up with him. As soon as you ring the doorbell, the door swings open and you’re immediately attacked by a small, white, fluffy mass."
 
+    show yubin
+
     y "Dubu, get back here! Sorry about that! Hey, [MC_name]!"
 
     "Yubin picks up the wriggling mass and smiles at you apologetically."
 
     y "Dubu’s just a puppy, so she’s very excitable. Come in! You can put your shoes here."
 
+    hide yubin
+
     "You go inside and take off your shoes, then follow Yubin (and Dubu) upstairs to his room."
 
     scene yubin_bedroom with fade
 
+    show yubin
+
     y "So, um..."
+
+    hide yubin
 
     "The air around the two of you becomes extremely awkward again. Dubu yips."
 
+    show yubin
+
     y "Uh... yea, it’s been a while. Hey, do you want to see pictures from Korea?"
+
+    hide yubin
 
     "He opens up his phone and shows you a multitude of photos: high school, Korean scenery, him with his friends."
     
@@ -699,14 +724,23 @@ label yubin_w1:
     mc "Yubin, um..."
 
     hide cecil
+    show yubin
 
     y "Yeah, I knew you would ask. I… I should explain, huh?"
 
+    hide yubin
+
     "He laughs a little nervously and stares down at Dubu."
 
-    y "When I was a girl, it always felt weird. Like I shouldn’t be a girl. But God made me a girl, and God doesn’t make mistakes. Then I saw people online talking about... being transgender. Like, actually being a boy when you were born a girl. It sounded similar to what I felt, so, um in high school, I decided to be a boy… I started wearing the boy’s uniform. And yeah. I’m a boy. I guess… God made me a boy that looks like a girl, haha."
+    show yubin
 
+    y "When I was a girl, it always felt weird. Like I shouldn’t be a girl. But God made me a girl, and God doesn’t make mistakes. Then I saw people online talking about... being transgender. Like, actually being a boy when you were born a girl."
+
+    y "It sounded similar to what I felt, so, um in high school, I decided to be a boy… I started wearing the boy’s uniform. And yeah. I’m a boy. I guess… God made me a boy that looks like a girl, haha."
+    
     y "Lucky for me, Korean doesn’t often use gendered language, but it was harder for me to adjust in English. Um..."
+
+    hide yubin
 
     "You can see Yubin start to fidget with the hem of his shirt. He looks at you cautiously, as though he’s expecting something from you."
 
@@ -715,6 +749,7 @@ label yubin_w1:
     mc "I’m happy for you, Yubin! I’m glad that you figured it out and you feel more comfortable now. How did telling your parents go?"
 
     hide cecil
+    show yubin
 
     "Yubin looks relieved. He starts to pet Dubu."
 
@@ -724,11 +759,17 @@ label yubin_w1:
 
     y "Some of the people at my old church didn’t like me anymore, though... We ended up moving churches."
 
+    hide yubin
+
     "He sighs. You know religion is a big part of his identity. Even if members of his religious community weren’t accepting of him anymore, you’re relieved that he was able to reconcile his beliefs with his gender identity."
 
+    show yubin
+    
     y "It’s funny, though. Instead of guys, they keep asking me if there are any girls I like."
 
     y "I’m not sure how to break it to them that, um, I’ve never really liked anyone like that..."
+
+    hide yubin
 
     "Hmm, could it be...?"
 
@@ -737,9 +778,11 @@ label yubin_w1:
     mc "Do you think you’re aromantic? That means you don’t feel romantic attraction to anybody. You could be asexual as well, which means you don’t feel sexual attraction either."
 
     hide cecil
+    show yubin
     
     y "There’s a word for that? Wait, I didn’t know that. How did you know?"
 
+    hide yubin
     show cecil
 
     mc "I, along with some of my friends, identify as some form of aromatic or asexual! It’s also kind of a spectrum - sometimes you can feel romantic or sexual attraction, but not all the time."
@@ -748,15 +791,23 @@ label yubin_w1:
     
     "You spend a couple of minutes explaining the aromantic-asexual umbrella, which you’ve researched extensively after you - and some of your friends - began identifying as ace. Yubin nods and takes in your every word."
 
+    show yubin
+    
     y "That makes sense. Then, yes... I think I’m aro-ace. I always thought it was weird that other people wanted boyfriends or girlfriends, but I never did. Thanks, [MC_name]... um, how do I explain this to my parents?"
 
+    hide yubin
+    
     "You help Yubin figure out how to explain the concept to his parents. Soon, the smell of delicious food wafts through the house, and his mother calls the two of you downstairs to eat lunch." 
     
     "Over your meal, Yubin explains his feelings to his parents, while you provide some support. They don’t quite seem to understand, but Yubin assures you they’ll get it in time. Apparently, they were the same way when he told them he was trans."
 
     "After lunch, the two of you play with Dubu for a while. Eventually, you take your leave."
 
+    show yubin
+
     y "Thanks again, [MC_name]. It was really nice to see you! We should hang out again soon."
+
+    hide yubin
 
     "You hear the pattering of small feet behind Yubin, and he quickly waves and shuts the door. You hear him scold Dubu and tell her to stay put, and you laugh as you make your way back home."
 
